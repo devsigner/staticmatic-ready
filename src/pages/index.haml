@@ -1,2 +1,12 @@
-%p
-  %strong Ready to start
+- content_hash[:body_class] = "home"
+- content_hash[:show_header] = false
+  
+/ =====================
+/ = CONTENT HOME PAGE =
+/ =====================
+#home_header
+  %h1 home
+  
+- content_hash[:sidebar] = capture_haml do
+  = partial("sidebar")
+

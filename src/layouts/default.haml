@@ -8,11 +8,17 @@
       = stylesheets :ie6, :media => :screen
     /[if IE 7]
       = stylesheets :ie7, :media => :screen
-  %body
+  %body{:class => yield_for(:body_class) }
+    
     #bg_container
+        
       #container
-        #header= partial("header")
-        #content= yield        
-        #sidebar= partial("sidebar")
+        -unless yield_for(:show_header) == false
+          #header= partial("header")
+        #content
+          = yield
+          
+        #sidebar= yield_for(:sidebar)
+
         #footer
           Copyrights 2010
