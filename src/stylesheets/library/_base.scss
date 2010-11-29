@@ -1,0 +1,16 @@
+///* =================== */
+///* = Config BLUPRINT = */
+///* =================== */
+$blueprint-grid-columns: 24;
+$blueprint-container-size: 950px;
+$blueprint-grid-margin: 10px;
+
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+
+
+///* =============== */
+///* = CONFIG SITE = */
+///* =============== */
+
+$sidebar-columns: 6;
+$content-columns: $blueprint-grid-columns - $sidebar-columns;

@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title OneSpot.me
+    = stylesheets :screen, :media => :screen
+    = stylesheets :print, :media => :print
+    /[if IE 6]
+      = stylesheets :ie6, :media => :screen
+    /[if IE 7]
+      = stylesheets :ie7, :media => :screen
+  %body
+    #bg_container
+      #container
+        #header= partial("header")
+        #content= yield        
+        #sidebar= partial("sidebar")
+        #footer
+          Copyrights 2010
